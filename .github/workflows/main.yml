@@ -22,11 +22,10 @@ jobs:
     - uses: actions/checkout@v2
     
     # Set up da versão do Node
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 
       uses: actions/setup-node@v2
       with:
         node-version: 14.x
-        cache: 'npm'
     - run: npm install
     - run: npm run cy:run
       continue-on-error: true
