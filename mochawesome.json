@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-18T15:29:27.979Z",
+    "end": "2021-10-18T15:29:37.111Z",
+    "duration": 9132,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c0b17517-6ce2-4e33-95f0-8a8fd89e4419",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a599ee09-7791-4277-a364-5c5961a3a7d6",
+          "title": "Cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+              "fullTitle": "Cadastro Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+              "timedOut": null,
+              "duration": 6296,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://form-agilizei.netlify.app'); // ------MAPEANDO ELEMENTOS------\ncy.get('input[name=firstName]').type(chance.first());\ncy.get('input[name=lastName]').type(chance.last());\ncy.get('textarea[name=adress]').type(chance.address());\ncy.get('input[name=emailAdress]').type(chance.email());\ncy.get('input[value=n]').check();\ncy.get('input[type=checkbox]').check('Netflix');\ncy.get('input[type=checkbox]').check('Dormir');\ncy.get('select#countries').select('Japão', {\n  force: true\n});\ncy.get('select#years').select('2017', {\n  force: true\n});\ncy.get('select#months').select('Abril', {\n  force: true\n});\ncy.get('select#days').select('11', {\n  force: true\n});\ncy.get('input#firstpassword').type('Alunos@2021');\ncy.get('input#secondpassword').type('Alunos@2021');\ncy.get('button#submitbtn').click();\ncy.url().should('contain', 'listagem');",
+              "err": {},
+              "uuid": "b25c26c8-6ba2-4503-b9d9-b144bcc0767f",
+              "parentUUID": "a599ee09-7791-4277-a364-5c5961a3a7d6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b25c26c8-6ba2-4503-b9d9-b144bcc0767f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6296,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
